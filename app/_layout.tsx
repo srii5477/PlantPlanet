@@ -3,11 +3,14 @@ import { Slot, SplashScreen } from 'expo-router';
 import { useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import { useFonts } from 'expo-font';
 import Index from './(tabs)/index';
 import Profile from './(tabs)/profile';
 import Feed from './(tabs)/feed';
-import 'react-native-gesture-handler';
-import { useFonts } from 'expo-font';
+import BookMark from './(tabs)/bookmark';
+import Explore from './(tabs)/explore';
+
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,6 +36,8 @@ export default function RootLayout() {
           <Stack.Screen name="Index" component={Index} options={{ headerShown: false }} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Feed" component={Feed} />
+          <Stack.Screen name="BookMark" component={BookMark} />
+          <Stack.Screen name="Explore" component={Explore} />
         </Stack.Navigator>
       </NavigationContainer>
     
