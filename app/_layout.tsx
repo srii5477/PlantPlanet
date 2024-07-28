@@ -10,6 +10,7 @@ import Profile from './(tabs)/profile';
 import Feed from './(tabs)/feed';
 import BookMark from './(tabs)/bookmark';
 import Explore from './(tabs)/explore';
+import { PaperProvider } from 'react-native-paper';
 
 
 SplashScreen.preventAutoHideAsync();
@@ -31,6 +32,7 @@ export default function RootLayout() {
 
   if(!fontsLoaded && !error)  return null;  
   return (
+    <PaperProvider>
       <NavigationContainer independent={true}>
         <Stack.Navigator>
           <Stack.Screen name="Index" component={Index} options={{ headerShown: false }} />
@@ -40,7 +42,7 @@ export default function RootLayout() {
           <Stack.Screen name="Explore" component={Explore} />
         </Stack.Navigator>
       </NavigationContainer>
-    
+    </PaperProvider>
     
   )
 } 
