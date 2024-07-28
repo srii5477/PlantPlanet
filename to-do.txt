@@ -1,1 +1,0 @@
-1. status bar loading for explore
