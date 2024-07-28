@@ -42,6 +42,14 @@ const Index = () => {
           }
         />
       </TouchableOpacity>
+      <TouchableOpacity>
+        <Button
+          title="Quiz"
+          onPress={() =>
+            navigation.navigate('Quiz')
+          }
+        />
+      </TouchableOpacity>
     </View>
   )
 }

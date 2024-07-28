@@ -10,6 +10,7 @@ import Profile from './(tabs)/profile';
 import Feed from './(tabs)/feed';
 import Map from './(tabs)/map';
 import Explore from './(tabs)/explore';
+import Quiz from './(tabs)/quiz'
 import { PaperProvider } from 'react-native-paper';
 
 
@@ -40,6 +41,7 @@ export default function RootLayout() {
           <Stack.Screen name="Feed" component={Feed} />
           <Stack.Screen name="Map" component={Map} />
           <Stack.Screen name="Explore" component={Explore} />
+          <Stack.Screen name="Quiz" component={Quiz} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

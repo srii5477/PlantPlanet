@@ -1,14 +1,12 @@
-import { ScrollView, View, Text, Image, TouchableOpacity } from 'react-native'
+import { ScrollView, View, Text, Image, Button } from 'react-native'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Bank from './bank'
 
 const Quiz = () => {
-  let [ current, setCurrent ] = useState("");
-  let [ score, setScore ] = useState(0);
+  let [ current, setCurrent ] = useState(0);
   let [ timer, setTimer ] = useState(10); 
   let [ hasStarted, setHasStarted ] = useState(false);
-  let [ isLast, setIsLast ]=useState(false)
 
   function startQuiz () {
     let newValue = !hasStarted;
@@ -37,12 +35,15 @@ const Quiz = () => {
   return (
     <ScrollView className="bg-emerald-600">
       <Text> Quiz </Text>
-      <TouchableOpacity onPress={startQuiz}> Start/end the quiz. </TouchableOpacity>
-      { hasStarted && 
+      {/* <TouchableOpacity onPress={startQuiz}> <Text> Start/end the quiz. </Text> </TouchableOpacity> */}
+      <Button loading={true} className="w-80 m-8 bg-emerald-700" buttonColor="#003300" mode="contained-tonal" onPress={startQuiz} title="Start/end the quiz">
+      </Button>
+      { hasStarted ?
         <View>
             <Text> Question Card </Text>
-
-        </View>
+            <Text> { Bank[current]['description'] } </Text>
+            { Bank.map((info, key) => }
+        </View> : <Text> xyz </Text>
       } 
     </ScrollView>
   )
