@@ -22,6 +22,11 @@ const Profile = () => {
         5. Coconuts {"\n"}
         6. Plums {"\n"}
       </Text>
+
+      <Text className="font-plight text-xl m-5 text-pink-950">
+        Explore my collection:
+      </Text>
+      
     </ScrollView>
   )
 }
