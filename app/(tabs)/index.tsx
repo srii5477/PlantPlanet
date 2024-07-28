@@ -36,9 +36,9 @@ const Index = () => {
       </TouchableOpacity>
       <TouchableOpacity>
         <Button
-          title="BookMarks"
+          title="Map"
           onPress={() =>
-            navigation.navigate('BookMark')
+            navigation.navigate('Map')
           }
         />
       </TouchableOpacity>

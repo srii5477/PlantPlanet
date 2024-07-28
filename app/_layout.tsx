@@ -8,7 +8,7 @@ import { useFonts } from 'expo-font';
 import Index from './(tabs)/index';
 import Profile from './(tabs)/profile';
 import Feed from './(tabs)/feed';
-import BookMark from './(tabs)/bookmark';
+import Map from './(tabs)/map';
 import Explore from './(tabs)/explore';
 import { PaperProvider } from 'react-native-paper';
 
@@ -38,7 +38,7 @@ export default function RootLayout() {
           <Stack.Screen name="Index" component={Index} options={{ headerShown: false }} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Feed" component={Feed} />
-          <Stack.Screen name="BookMark" component={BookMark} />
+          <Stack.Screen name="Map" component={Map} />
           <Stack.Screen name="Explore" component={Explore} />
         </Stack.Navigator>
       </NavigationContainer>

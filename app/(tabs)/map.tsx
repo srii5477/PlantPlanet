@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const BookMark = () => {
+const Map = () => {
   return (
     <View>
-      <Text>BookMark</Text>
+      <Text>Map</Text>
     </View>
   )
 }
 
-export default BookMark
+export default Map
